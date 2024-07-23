@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - Healthcare Data Analysis</title>
+  <meta content="Portfolio details for a healthcare data analysis project, focusing on patient wait times and data exploration." name="description">
+  <meta content="healthcare, data analysis, patient wait times, SQL, Jupyter Notebook, Git, GitHub" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Folio - v4.3.0
+  * Template URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+    /* Custom styles for additional project information */
+    #additional-info {
+      padding: 80px 0;
+      background-color: #f8f9fa;
+    }
+
+    #additional-info h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #343a40;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    #additional-info p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #6c757d;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    #additional-info ul,
+    #additional-info ol {
+      padding-left: 20px;
+    }
+
+    #additional-info ul li,
+    #additional-info ol li {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #343a40;
+      margin-bottom: 20px;
+    }
+
+    #additional-info ul li:before {
+      content: "\2022";
+      color: #6c757d;
+      font-size: 18px;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    #additional-info ol {
+      list-style-type: decimal;
+    }
+
+    #additional-info ol code {
+      display: block;
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo"><img src="assets/img/logo3.png" alt="" class="img-fluid"></a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="index.html#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link active  scrollto" href="index.html#portfolio">Portfolio</a></li>
+          <li><a class="nav-link active  scrollto" href="index.html#certifications">Certifications</a></li>
+          <li><a class="nav-link  scrollto" href="index.html#journal">Blog</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Waiting Time Analysis</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li>Waiting Time Analysis</li>
+          </ol>
+        </div>
+      </div>
+    </section><!-- Breadcrumbs Section -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img src="assets/img/DistributionOfpatients.png" alt="Data Visual 1">
+                  <div class="slide-caption">
+                    <h4>The distribution of the different waiting times</h4>
+                    <p>The following visuel done with power bi showcases the main waiting times in the hospital: Pneumo,cardio,IECG,Payment
+                      and ticket office 1 showing an uneven distribution of observations.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/dist.png" alt="Data Visual 2">
+                  <div class="slide-caption">
+                    <h4>Normal distribution</h4>
+                    <p>Patient wait time variable follows a normal distribution, while other features have different distributions.
+                      The different distributions of the features can be shown in the following figure.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/afterNor.png" alt="Data Visual 3">
+                  <div class="slide-caption">
+                    <h4>After Normalisation</h4>
+                    <p>the distribution of features after normalisation is shown in this figure</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong>: Healthcare Data Analysis</li>
+                <li><strong>Project Date</strong>: 15 April, 2023</li>
+                <li><strong>Github Project URL</strong>: <a href="https://github.com/yassineeea/Waiting-time-of-patients-analysis">WaitingTimeProject</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Data Analysis Healthcare Project </h2>
+              <p>
+                The purpose of this project is to analyze patient wait times in a hospital setting. By exploring and cleaning the data, we aim to gain insights into factors that may influence wait times and suggest potential areas for improvement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+    <!-- ======= Additional Project Information Section ======= -->
+    <section id="additional-info" class="additional-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>Additional Project Information</h2>
+            <p>
+              Here you can find detailed information about the project, including SQL queries, tools used, data exploration, data cleaning, and more.
+            </p>
+
+            <div class="col-lg-12">
+              <h3>Tools Used <i class="bi bi-tools"></i></h3><br>
+              <ul>
+                <li>SQL: Foundation for exploring and cleaning the database.</li>
+                <li>Jupyter Notebook: Implemented Python code for data visualization & prediction.</li>
+                <li>Microsoft SQL Server Management Studio: Familiar environment for SQL queries.</li>
+                <li>Power bi: Used for waiting time visualisations.</li>
+                <li>Git and GitHub: Version control and collaboration for scripts and analysis.</li>
+
+              </ul>
+            </div><br>
+
+            <div class="col-lg-12">
+              <h3>Data Exploration <i class="bi bi-bar-chart"></i></h3><br>
+              <ul>
+                <li>
+                  <strong>Total number of patients and their average wait time</strong><br>
+                  The following query calculates the total number of patients and their average wait time:<br>
+                  <code>
+                    select Sum(Number_In) as NumberOfPatients, AVG(Patient_WaitTime) as AverageWaitTime<br>
+                    from WaitingTime<br>
+                    Group by Number_In<br>
+                    order by AverageWaitTime Asc<br>
+                  </code>
+                </li>
+                <li>
+                  <strong>Comparison of Total Patient Waiting Time vs Waiting Time in the guichet</strong><br>
+                  This query compares the total patient waiting time with the time spent waiting in the guichet:<br>
+                  <code>
+                    select Patient_WaitTime, waitTime_guichet1, (waitTime_guichet1/Patient_WaitTime)*100 as GuichetTimePourcentage<br>
+                    from WaitingTime <br>
+                    where Patient_WaitTime <> 0<br>
+                    order by GuichetTimePourcentage Desc<br>
+                  </code>
+                </li>
+                <li>
+                  <strong>Correlation between Patient Time and Number of Patients in the hospital</strong><br>
+                  This query calculates the correlation between the number of patients in the hospital and the patient wait time:<br>
+                  <code>
+                    SELECT<br>
+                      (SUM(Number_In * Patient_WaitTime) - (SUM(Number_In) * SUM(Patient_WaitTime)) / COUNT(*) )<br>
+                      / SQRT(<br>
+                        (SUM(POWER(Number_In, 2)) - POWER(SUM(Number_In), 2) / COUNT(*))<br>
+                        * (SUM(POWER(Patient_WaitTime, 2)) - POWER(SUM(Patient_WaitTime), 2) / COUNT(*))<br>
+                      ) as correlation<br>
+                    FROM WaitingTime;<br>
+                  </code>
+                </li>
+              </ul>
+            </div><br>
+
+            <div class="col-lg-12">
+              <h3>Data Cleaning <i class="bi bi-file-earmark-break"></i></h3><br>
+              <ul>
+                <li>
+                  <strong>Standardizing the date</strong><br>
+                  The 'Patient-ArrivalTime' column was standardized to a date format using the following query:<br>
+                  <code>
+                    Alter Table WaitingTime<br>
+                    Add ArrivalTimeConverted Date;<br>
+
+                    Update WaitingTime<br>
+                    SET  ArrivalTimeConverted =  CONVERT(Date, [Patient-ArrivalTime]) <br>
+                  </code>
+                </li>
+                <li>
+                  <strong>Populating property address data</strong><br>
+                  The 'PatientAddress' column was split into 'PatientSplitAddress' and 'PatientAddressCity' using the following queries:<br>
+                  <code>
+                    Select PatientAddress,<br>
+                    Substring (PatientAddress, 1, CHARINDEX(',', PatientAddress) - 1) as address,<br>
+                    Substring (PatientAddress, CHARINDEX(',', PatientAddress) + 1, Len(PatientAddress)) as city<br>
+                    from WaitingTime<br>
+
+                    Alter Table WaitingTime<br>
+                    Add PatientSplitAddress Nvarchar(255);<br>
+
+                    Update WaitingTime<br>
+                    SET  PatientSplitAddress =  Substring (PatientAddress, 1, CHARINDEX(',', PatientAddress) - 1)<br>
+
+                    Alter Table WaitingTime<br>
+                    Add PatientAddressCity Nvarchar(255);<br>
+
+                    Update WaitingTime<br>
+                    SET  PatientAddressCity =  Substring (PatientAddress, CHARINDEX(',', PatientAddress) + 1, Len(PatientAddress))<br>
+                  </code>
+                </li>
+                <li>
+                  <strong>Removing outliers</strong><br>
+                  Rows with outlier values were removed using the following query:<br>
+                  <code>
+                    DELETE FROM WaitingTime<br>
+                    where waitTime_guichet1 > Patient_WaitTime <br>
+                    or waitTime_Payment > Patient_WaitTime <br>
+                    or waitTime_Pneumo > Patient_WaitTime <br>
+                    or  waitTime_Cardio > Patient_WaitTime <br>
+                    or  waitTime_IECG > Patient_WaitTime <br>
+                  </code>
+                </li>
+                <li>
+                  <strong>Handling null values</strong><br>
+                  Rows with null values in the 'PatientAddress' column were removed using the following query:<br>
+                  <code>
+                    Delete from WaitingTime<br> 
+                    Where PatientAddress is null <br>
+                  </code>
+                </li>
+                <li>
+                  <strong>Removing duplicates</strong><br>
+                  Duplicate rows were removed using the following query:<br>
+                  <code>
+                    with rowNumCte As (<br>
+                      select * ,<br>
+                      ROW_NUMBER() OVER (<br>
+                       Partition by  Patient_WaitTime, PatientAddress, Number_In<br>
+                       order by Patient_WaitTime<br>
+                     ) as Row_Num<br>
+                     from WaitingTime<br>
+                     )
+                     Delete<br>
+                     from rowNumCte<br>
+                     where Row_Num > 1<br>
+                  </code>
+                </li>
+                <li>
+                  <strong>Removing unused columns</strong><br>
+                  The unused columns 'PatientAddress1' and 'PatientAddress' were removed using the following query:<br>
+                  <code>
+                    Alter Table WaitingTime <br>
+                    Drop column PatientAddress1, PatientAddress<br>
+                  </code>
+                </li>
+              </ul>
+            </div><br>
+            <div class="col-lg-12">
+              <h3>Data Visualisation <i class="bi bi-search"></i></h3><br>
+              <ul>
+                
+                  
+                  
+                <strong> During the data profiling phase, we implemented various types of profiling, including uniqueness, Redondancy and columns profiling.<br><br></strong>
+
+                
+                 
+                <li> 
+                  <strong><b>1. The distribution of the different waiting times:</b> To gain a deeper understanding of the data, it is important to analyze the
+                    distribution of features.
+                    The following visuel done with power bi showcases the main waiting times in the hospital: Pneumo,cardio,IECG,Payment
+                    and ticket office 1 showing an uneven distribution of observations. </strong>
+                </li>
+                <div style="text-align:center;">
+                  <img src="assets/img/DistributionOfpatients.png" alt="Visualization of Findings" style="width:60%; height:auto;">
+                </div>
+                <li>
+                    <strong><b>2. Univariate Analysis:</b> <br>
+                      the python code used to plot the different distributions<br>
+                      <code>
+                      features = [col for col in df.columns <br>
+                      if df[col].dtype=='float64' or col =='Type'] <br>
+                      num_features = [feature for feature in features if df[feature].dtype=='float64']<br>
+
+                      # Histograms of numeric features<br>
+                      fig, axs = plt.subplots(nrows=4, ncols=7, figsize=(25,15))<br>
+                      fig.suptitle('Numeric features histogram')<br>
+                      for j, feature in enumerate(num_features):<br>
+                      sns.histplot(ax=axs[j//7, j-7*(j//7)], data=df, x=feature)<br>
+                      plt.show()<br>
+                      </code><br>
+                      The resulting data set was further analyzed to gain insights on the distribution
+                      of each feature. The following Figure presents the variation of parameters before the normali
+                     sation, showing a clear distribution pattern.<br>
+                      
+                     However, certain variables such as NQ-room1 and NQ-room2 have almost identical
+                      distributions, indicating they can be considered as a single variable. This is also
+                      true for other features, which should not exist in the database as they could lead the
+                      model’s optimization process in the wrong direction due to their high correlation
+                      of over 80%.<br>
+                      In this case,Patient wait time variable follows a normal distribution, while other
+                      features have different distributions.<br>
+                      The different distributions of the features can be shown in the following figure.<br>
+                     </strong>
+                </li>
+                
+                <div style="text-align:center;">
+                   <img src="assets/img/dist.png" alt="Visualization of Findings" style="width:70%; height:auto;"><br>
+
+                </div>
+
+
+                <li> 
+                    <strong><b>3. Data Normalisation:</b><br>  To address this issue, we can do a normalisation of all other features so that
+                      we can help our model learn the underlying patterns in the data more accurately,
+                      ultimately leading to better results.<br>
+                      We used the following python code to normalize the different distributions as shown in this figure.<br>
+                
+                      <code>
+
+                      # Normalisation des données (input)<br>
+                      import pandas as pd<br>
+                      from sklearn import preprocessing<br>
+
+                      X = X.values # returns a numpy array<br>
+                      min_max_scaler = preprocessing.MinMaxScaler()<br>
+                      x_scaled = min_max_scaler.fit_transform(X)<br>
+                      X = pd.DataFrame(x_scaled)<br>
+                      </code> </strong>
+                  </li><br>
+                  the distribution of features after normalisation is shown in figure 
+
+
+                
+                <div style="text-align:center;">
+                  <img src="assets/img/afterNor.png" alt="Visualization of Findings" style="width:70%; height:auto;">
+                </div>
+
+                
+              </ul>
+            </div>
+            <br>
+            
+
+
+          </div>
+        </div>
+      </div>
+    </section><!-- End Additional Project Information Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <div id="footer" class="text-center">
+    <div class="container">
+      <div class="socials-media text-center">
+        <ul class="list-unstyled">
+          <li><a href="https://www.linkedin.com/in/yassine-zamit/"><i class="bi bi-linkedin"></i></a></li>
+          <li><a href="https://github.com/yassineeea"><i class="bi bi-github"></i></a></li>
+          <li><a href="https://medium.com/@yassinezamit26"><i class="bi bi-medium"></i></a></li>
+          <li><a href="https://www.youtube.com/channel/UCUQQiDPAwF76kzLnFjL-Q-Q"><i class="bi bi-youtube"></i></a></li>
+        </ul>
+      </div>
+      
+
+    </div>
+  </div><!-- End Footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
